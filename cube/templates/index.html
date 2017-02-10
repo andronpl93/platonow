@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Кубик</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen, projection" />
+</head>
+
+<body>
+
+    <div class="container">
+    
+        <button class="arrow a-top"></button>
+        <button class="arrow a-bottom"></button>
+        <button class="arrow a-left"></button>
+        <button class="arrow a-right"></button>
+        
+        <div class="cube">
+            <span class="n1">
+                <b class="d-50-50"></b>
+            </span>
+            <span class="n2">
+                <b class="d-25-75"></b>
+                <b class="d-75-25"></b>
+            </span>                
+            <span class="n3">
+                <b class="d-25-25"></b>
+                <b class="d-50-50"></b>
+                <b class="d-75-75"></b>
+            </span>                          
+            <span class="n4">
+                <b class="d-25-25"></b>
+                <b class="d-25-75"></b>
+                <b class="d-75-25"></b>
+                <b class="d-75-75"></b>
+            </span>                          
+            <span class="n5">
+                <b class="d-25-25"></b>
+                <b class="d-25-75"></b>
+                <b class="d-50-50"></b>
+                <b class="d-75-25"></b>
+                <b class="d-75-75"></b>
+            </span>                          
+            <span class="n6">
+                <b class="d-25-25"></b>
+                <b class="d-25-75"></b>
+                <b class="d-50-25"></b>
+                <b class="d-50-75"></b>                    
+                <b class="d-75-25"></b>
+                <b class="d-75-75"></b>
+            </span>                
+        </div>            
+        
+    </div>
+
+<!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter16792801 = new Ya.Metrika({id:16792801, enableAll: true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/16792801" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->    
+    
+</body>
+<script>
+function supportCSS(prop) {
+    var yes = false; // по умолчанию ставим ложь
+    if('Moz'+prop in document.body.style) {
+        yes = true; // если FF поддерживает, то правда
+    }
+    if('webkit'+prop in document.body.style) {
+        yes = true; // если Webkit поддерживает, то правда
+    }
+    if('ms'+prop in document.body.style) {
+        yes = true; // если IE поддерживает, то правда
+    }
+    if(prop in document.body.style) {
+        yes = true; // если поддерживает по умолчанию, то правда
+    }
+    return yes; // возращаем ответ
+}
+alert(supportCSS(border-horizontal-spacing));
+</script>
+</html>
