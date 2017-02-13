@@ -89,11 +89,19 @@ window.onblur = function(){
 function animationCube(angle,mFrames){
     
       sT=setTimeout(function tick(){
-      rotX+=angle;
-      rotY=rotX*0.3;
-      //rotZ=-rotX*0.3;
-     // cube.css("transform","perspective(100vh) rotateX("+rotX+"deg) rotateY("+rotY+"deg) rotateZ("+0+"deg)");
-     cube.css("transform","perspective(100vh) rotate3d("+2+","+1+","+0+","+rotX+"deg)");
+      rotX+=angle*1.1;
+      rotY+=angle;
+      rotZ+=angle;
+      textCss="perspective(100vh) rotateX("+rotX+"deg) rotateY("+rotY+"deg) rotateZ("+rotZ+"deg)";
+     cube.css({
+         'transform': textCss,
+         '-ms-transform': textCss,
+         '-o-transform': textCss,
+         '-moz-transform': textCss,
+         '-webkit-transform': textCss
+         
+     });
+    // cube.css("transform","perspective(100vh) rotate3d("+2+","+1+","+0+","+rotX+"deg)");
       
       indexInt++;
       if(indexInt>mFrames)
@@ -118,10 +126,10 @@ function animationCube(angle,mFrames){
 
 
 function animation(stat,angle,mFrames,duration,interval){
-    angle = angle || 0.9;
-    mFrames = mFrames || 100;
+    angle = angle || 0.45;
+    mFrames = mFrames || 200;
     duration = duration || 1000;
-    interval = interval || 3000;
+    interval = interval || 2000;
 
    if(stat)
    {   

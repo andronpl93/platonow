@@ -4,43 +4,69 @@
 <head>
 	<title>Кубик</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/onepage-scroll.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/mediaQuery.css' %}" media="screen, projection" />
 	<link rel="stylesheet" type="text/css" href="{% static 'css/cube.css' %}" media="screen, projection" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/cubeLandscape.css' %}" media="screen and (orientation: landscape), projection" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/cubePortrait.css' %}" media="screen and (orientation: portrait), projection" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/menu.css' %}"  />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/polygo.css' %}"  />
+
 </head>
 
 <body>
+<div id='wrap'>
+    <section>
+        <div id='first'>
+           <p>Сайт под ключ</p>
+        </div>
 
-    <div class="container">
+    </section>
+    <section>
+        <div class="hex hex-3">
+            <div class="inner">
+                <h4>CONTACT US</h4>
+                <hr />
+                <p>We Open Everyday</p>
+            </div>
+            <a href="#"></a>
+            <div class="corner-1"></div>
+            <div class="corner-2"></div>
+        </div>
+        <div class="hex" >
+            <a href="#"></a>
+            <div class="corner-1"></div>
+            <div class="corner-2"></div>
+        </div>
+    
+    </section>
+    <section>
 
-        <div class="cube">
-            <section class='n1'>
-             
-            </section>
-            <section class='n2'>
-       
-            </section>
-            <section class='n3'>
-          
-            </section>
-            <section class='n4'>
-         
-            </section>
-            <section class='n5'>
-           
-            </section>
-            <section class='n6'>
-           
-            </section>
+        <div class="container">
+
+            <div class="cube">
+                <div class='n n1'>
+                </div>
+                <div class='n n2'>
+                </div>
+                <div class='n n3'>
+                </div>
+                <div class='n n4'>
+                </div>
+                <div class='n n5'>
+                </div>
+                <div class='n n6'> 
+                </div>
+            </div>         
         
-        </div>         
-        
-    </div>
-
-<!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter16792801 = new Ya.Metrika({id:16792801, enableAll: true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/16792801" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->    
-<div id = 'foot'></div>
+        </div>
+        <div id = 'foot'></div>
+    </section>
+</div>
 </body>
     <script src="{% static 'js/jquery_1_9_2.js' %}"></script>
     <script src="{% static 'js/cube.js' %}"></script>
+    <script src="{% static 'js/jquery.onepage-scroll.js' %}"></script>
+    <script src="{% static 'js/scroll.js' %}"></script>
+
 </html>
