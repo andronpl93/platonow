@@ -1,0 +1,30 @@
+
+#first{
+    height:20vh;
+    width:100%;
+    margin: 300px 0;
+    padding:0;
+    background-color: #F600A6;
+    font-family: century gothic;
+    text-align: center;
+
+
+}
+#first > p{
+    
+    height:100%;
+    text-shadow: 1px 1px 2px black, 5px 0px 15px rgba(250,254,252,1),-5px 0px 15px rgba(250,254,252,1);
+    margin:0 auto;
+    background:url('../img/bannerBack.jpg');
+    background-repeat:no-repeat;
+    background-position: center bottom; 
+    background-size: contain;
+    vertical-align:middle;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    text-transform:uppercase;
+    color:#FAFEFC;
+    font-size: 15.1vh;
+
+}
