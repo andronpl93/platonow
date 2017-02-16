@@ -16,7 +16,7 @@
   
   var defaults = {
     sectionContainer: "section",
-    easing: "ease",
+    easing: "ease-in-out",
     animationTime: 500,
     pagination: true,
     updateURL: false
@@ -110,7 +110,9 @@
           next.addClass("active");
           if(settings.pagination == true) {
             $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
+            $(".onepage-pagination li a" + "[data-index='" + index + "']").parent('li').removeClass("active");
             $(".onepage-pagination li a" + "[data-index='" + (index + 1) + "']").addClass("active");
+            $(".onepage-pagination li a" + "[data-index='" + (index + 1) + "']").parent('li').addClass("active");
           }
           $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
           $("body").addClass("viewing-page-"+next.data("index"))
@@ -137,7 +139,9 @@
           next.addClass("active")
           if(settings.pagination == true) {
             $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
+            $(".onepage-pagination li a" + "[data-index='" + index + "']").parent('li').removeClass("active");
             $(".onepage-pagination li a" + "[data-index='" + (index - 1) + "']").addClass("active");
+            $(".onepage-pagination li a" + "[data-index='" + (index - 1) + "']").parent('li').addClass("active");
           }
           $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
           $("body").addClass("viewing-page-"+next.data("index"))
@@ -191,7 +195,7 @@
     
     // Create Pagination and Display Them
     if(settings.pagination == true) {
-      $("<nav><ul class='onepage-pagination'>" + paginationList + "</ul></nav>").prependTo("body");
+      $("<nav><ul class='onepage-pagination'>" + paginationList + '<div class="current"><div class="ctoparr"></div><div class="cback"></div><div class="cbotarr"></div></div></ul></nav>').prependTo("body");
       posTop = (el.find(".onepage-pagination").height() / 2) * -1;
       el.find(".onepage-pagination").css("margin-top", posTop);
     }
@@ -201,11 +205,13 @@
       $(settings.sectionContainer + "[data-index='" + init_index + "']").addClass("active")
       $("body").addClass("viewing-page-"+ init_index)
       if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='" + init_index + "']").addClass("active");
-      
+      if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='" + init_index + "']").parent('li').addClass("active");
+
       next = $(settings.sectionContainer + "[data-index='" + (init_index) + "']");
       if(next) {
         next.addClass("active")
         if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='" + (init_index) + "']").addClass("active");
+        if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='" + (init_index) + "']").parent('li').addClass("active");
         $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
         $("body").addClass("viewing-page-"+next.data("index"))
         if (history.replaceState && settings.updateURL == true) {
@@ -215,11 +221,12 @@
       }
       pos = ((init_index - 1) * 100) * -1;
       el.transformPage(settings, pos);
-      
+
     }else{
       $(settings.sectionContainer + "[data-index='1']").addClass("active")
       $("body").addClass("viewing-page-1")
       if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='1']").addClass("active");
+      if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='1']").parent('li').addClass("active");
     }
     if(settings.pagination == true)  {
       $(".onepage-pagination li a").click(function (){
@@ -231,7 +238,9 @@
             current.removeClass("active")
             next.addClass("active")
             $(".onepage-pagination li a" + ".active").removeClass("active");
+            $(".onepage-pagination li a" + ".active").parent('li').removeClass("active");
             $(".onepage-pagination li a" + "[data-index='" + (page_index) + "']").addClass("active");
+            $(".onepage-pagination li a" + "[data-index='" + (page_index) + "']").parent('li').addClass("active");
             $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
             $("body").addClass("viewing-page-"+next.data("index"))
           }
