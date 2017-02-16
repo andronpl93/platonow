@@ -3,8 +3,8 @@
     height:100%;
     background: #5e9ddf url("../img/polygon/grass.jpg");
     background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 100% 50%;
+    background-position:  right bottom;
+    background-size: contain;
     overflow: hidden;
 
 }
@@ -53,8 +53,7 @@
     position: relative;
     z-index:5;
     margin:1%;
-    margin-left:5%;
-
+    margin-left:8%;
     font-size:17vh;
     color:#CFFCFF;
     text-shadow: 0 1px 0 #82DFF1,
@@ -82,5 +81,12 @@
 @media screen and (orientation: portrait) {
     #wrapPol > header > p {
         font-size:14vw;
+    }
+
+    #wrapPol:after{
+       content: "";
+       width:30%;
+       bottom:5%;
+       right:1%;
     }
 }
