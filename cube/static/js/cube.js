@@ -21,60 +21,6 @@ animation(true);      ////включить анимацию
 
 
 
-var indexMouse=false;
-var startX=0,startY=0,endX=0,endY=0;
-$('body').bind('mousedown touchstart',function(){
-    animation(false);
-
-    event.preventDefault();
-    m0X=event.clientX;
-    m0Y=event.clientY; 
-    indexMouse=true;
-
-});
-
-$('body').bind('mousemove touchmove ',function(){
-
-    if(indexMouse)
-    {   
-        if ((event.clientX)&&(event.clientY)) {
-            mX = event.clientX;
-            mY = event.clientY;
-            } else if (event.targetTouches) {
-            mX = event.targetTouches[0].clientX;
-            mY = event.targetTouches[0].clientY;
-            event.preventDefault();
-            }
-       // if (Math.abs(mX-m0X)<30 && Math.abs(mY-m0Y)<30)
-      //      return 0;
-        //animationCube(0.9,(mX/clientW)*400);
-        //rot+=0.9;
-        if(mX-m0X > 1)
-            rot2Y-=1;
-        if(mX-m0X < -1)
-            rot2Y+=1;
-        if(mY-m0Y > 1)
-            rot2X-=1;
-        if(mY-m0Y < -1)
-            rot2X+=1;
-
-        m0X=mX;
-        m0Y=mY;
-       console.log(mY);
-       //console.log(cube.css('transform'));
-       cube.css("transform","perspective(100vh) rotateX("+rot2X+"deg) rotateY("+rot2Y+"deg) rotateZ(-28deg)");
-       
-    }
-});
-
-$('body').bind('mouseup touchend',function(){
-
-    event.preventDefault();
-    startX=0;
-    startY=0 
-    indexMouse=false;
-});
-
 //// чтобы таймеры не становились в очередь при еактивной вкладке 
 window.onfocus = function(){
     animation(true);   

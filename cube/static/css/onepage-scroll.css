@@ -28,7 +28,7 @@ body, .onepage-wrapper, html {
 }
 nav {
   position: fixed;
-  top:50%;
+  top:39.75vh;
   right:1%;
   z-index:19;
 }
