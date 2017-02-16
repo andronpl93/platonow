@@ -173,3 +173,60 @@ nav li.active:nth-child(2) ~ .current {
 nav li.active:nth-child(3) ~ .current {
   top: 66.66%;
 }
+
+
+@media screen and (orientation: portrait) {
+    nav {
+         top:(50vh-11.25vw);
+    }
+    nav li {
+          width: 7vw;
+         height: 7.5vw;
+
+    }
+    .current{
+              height: 7.5vw;
+              width: 8.5vw;
+              left:-0.75vw;
+
+    }
+    .ctoparr {
+          height: 7.5vw;
+          left: 0.75vw;
+          width: 1vw;
+    }
+    .ctoparr:before {
+          height: 7.5vw;
+          left: -0.75vw;
+          position: absolute;
+          top: 0;
+          width: 1vw;
+    }
+
+    .ctoparr:after{
+          border-top: 1vw solid transparent;
+          border-bottom: 1vw solid transparent;
+          border-left: 1.8vw solid #aadd33;
+          margin-left: -0.75vw;
+    }
+
+    .cbotarr {
+          height: 7.5vw;
+          right: 0.75vw;
+          width: 1vw;
+    }
+
+    .cbotarr:before {
+          height: 7.5vw;
+          right: -0.75vw;
+          width: 1vw;
+    }
+
+    .cbotarr:after{
+          border-top: 1vw solid transparent;
+          border-bottom: 1vw solid transparent;
+          border-right: 1.8vw solid #aadd33;
+          margin-right: -0.75vw;
+    }
+
+}
