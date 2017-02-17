@@ -45,18 +45,20 @@ nav li {
   height: 7.5vh;
   position:relative;
   z-index:10;
-
-  background-size: contain;
+  background-size: cover;
 }
 
 nav li:nth-child(1) {
   background-image:url("../img/menu/home.png");
+
 }
 nav li:nth-child(2) {
   background-image: url("../img/menu/adaptive.png");
+
 }
 nav li:nth-child(3) {
   background-image:url("../img/menu/telephone.png");
+
 }
 
 
