@@ -1,14 +1,14 @@
 var settings = {
      hKol          : 0,
      content       : [
-                     '<img src="../../static/img/hex/ad.gif">',
+                     '<img src="../../static/img/hex/adaptive.gif">',
                      '<img src="../../static/img/hex/rs.gif">',
                      '<img src="../../static/img/hex/pg.gif">',
                      '<img src="../../static/img/hex/vk.gif">',
                      '<img src="../../static/img/hex/fb.gif">',
                      '<img src="../../static/img/hex/gp.gif">',
                      '<img src="../../static/img/hex/ig.png">',
-                     '<img src="../../static/img/hex/ad2.gif">'
+                     '<img src="../../static/img/hex/adaptive2.gif">'
                      ]
      }
 
