@@ -10,9 +10,9 @@
     background-color:#EFD834;
 }
 #wrapHex > div{
-    width:100vw;
+    width:101vw;
     height:100vh;
-    margin-left:-10vw;
+    margin-left:-11vw;
 }
 .hex{
     position: relative;
@@ -21,6 +21,24 @@
     width: 15.6vw;
     height: 9vw;
     margin: 5vw 0.5vw 0 0;
+    box-shadow: 0 0 1vh  #000 ;
+
+}
+
+.back{
+
+    width:100%;
+    height:100%;
+    position: relative;
+    z-index:10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size:5em;
+    font-family: Lucida, sans-serif;
+    color: #FCFCFC;
+    text-transform: uppercase;
 
 }
 
@@ -29,12 +47,13 @@
         position: absolute;
         top:0;
         left:0;
-        width:100%;
-        height:100%;
+        width:99.5%;
+        height:99.5%;
         background: inherit;
         z-index:2;
         overflow:hidden;
         backface-visibility: hidden;
+         box-shadow: 0 0 1vh  #000 ;
  }
 
 .hex .corner-1 {
@@ -47,13 +66,95 @@
         transform: rotate(-60deg);
  }
 
+
+
+
+@media screen and (orientation: landscape) {
+
+   @media  (min-aspect-ratio: 1/1) { /*1*/
+         .hex{
+                width: 21.24vw;
+                height: 12vw;
+                margin: 7.33vw 1.5vw 0 0;
+
+
+         }
+    }
+   @media  (min-aspect-ratio: 11/10) { /*1.1*/
+         .hex{
+                width: 19vw;
+                height: 11vw;
+                margin: 6.74vw 1.5vw 0 0;
+
+
+
+         }
+   }
+
+   @media  (min-aspect-ratio: 15/10) { /*1.5*/
+         .hex{
+                width: 17.5vw;
+                height: 10vw;
+                margin: 6.11vw 1vw 0 0;
+
+
+         }
+   }
+   @media  (min-aspect-ratio: 162/100) { /*1.62*/
+         .hex{
+                width: 15.66vw;
+                height: 9vw;
+                margin: 5.5vw 1vw 0 0;
+
+         }
+   }
+   @media  (min-aspect-ratio: 265/100) { /*1.62*/
+        #wrapHex{
+            padding-top:1vw;
+        }
+   }
+
+
+
+}
+
+
+
 @media screen and (orientation: portrait) {
 
     .hex{
       width: 16vh;
       height: 9vh;
       margin: 5.5vh 0.7vh 0 0;
+
     }
+
+    @media  (min-aspect-ratio: 63/100) { /*0.63*/
+         .hex{
+                width: 19.47vh;
+                height: 11vh;
+                margin: 6.74vh 1.5vh 0 0;
+
+         }
+    }
+    @media  (min-aspect-ratio: 4/5) { /*0.8*/
+         .hex{
+                width: 21.24vh;
+                height: 12vh;
+                margin: 7.33vh 1.5vh 0 0;
+
+         }
+    }
+    @media  (min-aspect-ratio: 93/100) {  /*0.94*/
+         .hex{
+                width: 23.01vh;
+                height: 13vh;
+                margin: 7.94vh 1.5vh 0 0;
+
+         }
+    }
+
+
 
 
 }

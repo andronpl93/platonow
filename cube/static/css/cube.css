@@ -8,7 +8,9 @@
     z-index:-1;
     background:#E0E0E0 url("../img/cube/b.jpg");
     background-repeat:no-repeat;
-    background-position: center bottom; 
+    background-position: center bottom;
+    background-size: contain;
+
     
 }
 
@@ -143,5 +145,4 @@
                                 } 
                                 
                               
-
 

@@ -91,3 +91,13 @@
        right:1%;
     }
 }
+@media  (min-aspect-ratio: 262/100) { /*1.62*/
+        #wrapPol:after{
+            content: "Блять, ну серьезно, зачем тебе такой монитор? Мне лень под него сайт затачивать";
+            font-size:5em;
+            position:absolute;
+            top:10vh;
+            left:50vw;
+            z-index: 100;
+        }
+}

@@ -3,4 +3,4 @@ from django.http import HttpResponse
 
 # Create your views here.
 def start(request):
-    return render(request, 'cube/index.html', {'hexahedrons':range(50)})
+    return render(request, 'cube/index.html', {'hexahedrons':range(30)})
