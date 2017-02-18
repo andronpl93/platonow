@@ -88,11 +88,11 @@ function imagePlacement (){
     var i=0;
     $('.back').each(function (index){
         if(i<settings.content.length){
-            if(index%Math.ceil(settings.hKol/(settings.hKol-settings.content.length))!=0){
+           // if(index%Math.ceil(settings.hKol/(settings.hKol-settings.content.length))!=0){
                 $(this).html(randList(mas));
                 $(this).parent().css('background-color','transparent');
                 i++;
-            }
+           // }
 
         }
     });
