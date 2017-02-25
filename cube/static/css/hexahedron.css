@@ -86,7 +86,7 @@
 
 
          }
-         .active .hex .back > img{
+         .back > img{
                  top:-6.1vw;
                  left:0;
          }
@@ -98,7 +98,7 @@
                 height: 11vw;
                 margin: 6vw 0.75vw 0 0;
          }
-          .active .hex     .back > img{
+            .back > img{
                  top:-5.5vw;
                  left:0;
 
@@ -112,7 +112,7 @@
                 height: 10vw;
                 margin: 6.11vw 1vw 0 0;
          }
-         .active .hex    .back > img{
+          .back > img{
                  top:-5.1vw;
                  left:0;
          }
@@ -123,7 +123,7 @@
                 height: 9vw;
                 margin: 5.5vw 1vw 0 0;
          }
-          .active  .hex   .back > img{
+          .back > img{
                  top:-4.55vw;
                  left:0;
          }
@@ -132,7 +132,7 @@
         #wrapHex{
             padding-top:1vw;
         }
-         .active   .hex  .back > img{
+          .back > img{
                  top:-4.55vw;
                  left:0;
          }
@@ -152,7 +152,7 @@
       margin: 5.5vh 0.7vh 0 0;
 
     }
-      .active .hex .back > img{
+      .back > img{
                  top:-5.95vh;
                  left:0;
     }
@@ -163,7 +163,7 @@
                 height: 9vh;
                 margin:  5.5vh 1vh 0 0;
          }
-          .active  .hex   .back > img{
+           .back > img{
                  top:-4.7vh;
                  left:0;
          }
@@ -177,7 +177,7 @@
 
 
          }
-          .active   .hex   .back > img{
+            .back > img{
                  top:-5.5vh;
                  left:0;
          }
@@ -190,7 +190,7 @@
 
 
          }
-         .active  .hex   .back > img{
+          .back > img{
                  top:-6.2vh;
                  left:0;
          }
@@ -203,7 +203,7 @@
 
 
          }
-        .active .hex .back > img{
+         .back > img{
                  top:-6.9vh;
                  left:0;
          }
@@ -212,27 +212,4 @@
 
 
 
-}
-.hex:nth-child(even)  img{
-    top: -50vw;
-    left: -50vw;
-}
-.hex:nth-child(odd)  img{
-    top: 50vw;
-    left: -50vw;
-}
-.hex:nth-child(4n)  img{
-    top: 50vw;
-    left: 50vw;
-}
-.hex:nth-child(4n+1)  img{
-    top: -50vw;
-    left: 50vw;
-}
-
-.back > img{
-          -webkit-transition:all 1.5s ease;
-     -moz-transition: all 1.5s ease;
-     -o-transition: all 1.5s ease;
-    transition: all 1.5s ease;
 }
