@@ -157,6 +157,9 @@ margin: 20% auto ;
 
 
 #content,#cloud,#wrapPol:after,#wrapPol:before{
+        -webkit-transition:all 1.5s ease;
+     -moz-transition: all 1.5s ease;
+     -o-transition: all 1.5s ease;
     transition: all 1.5s ease;
 
 }
