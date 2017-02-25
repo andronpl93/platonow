@@ -23,9 +23,7 @@
 .active #cloud{
     right: 3%;
 }
-.active #wrapPol:after{
-    right:10%;
-}
+
 
 #cloud{
        top:12%;
@@ -37,7 +35,7 @@
 #wrapPol:after{
        content: "";
        width:50%;
-       height:50%;
+       height:10%;
        bottom:15%;
        right:-10%;
        z-index: 1;
