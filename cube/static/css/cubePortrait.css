@@ -8,7 +8,7 @@
 .cube{
 
 
-                    margin-top:50%;
+                    margin-top:70%;
                     -webkit-transform: perspective(110vh) rotate3d(1,1,0,0);           
                     -moz-transform: perspective(110vh) rotate3d(1,1,0,0);           
                     -o-transform: perspective(110vh) rotate3d(1,1,0,0);           

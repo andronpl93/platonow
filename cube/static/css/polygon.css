@@ -20,10 +20,19 @@
 
 
 }
+.active #cloud{
+    right: 3%;
+}
+.active #wrapPol:after{
+    right:10%;
+}
+.active #wrapPol:before{
+       right:30%;
 
+}
 #cloud{
        top:12%;
-       right:3%;
+       right:-300%;
        z-index:0;
        background-image: url('../img/polygon/cloud.png');
     }
@@ -33,17 +42,18 @@
        width:50%;
        height:50%;
        bottom:15%;
-       right:10%;
+       right:-50%;
        z-index: 1;
        background-image: url('../img/polygon/tree.png');
     }
+
 
 #wrapPol:before{
        content: "";
        width:20%;
        height:20%;
        bottom:1%;
-       right:30%;
+       right:0%;
        z-index: 2;
        background-image: url('../img/polygon/cat.png');
     }
@@ -81,10 +91,8 @@ margin: 20% auto ;
  line-height:1.5;
  background-color: rgba(0,0,0,.5);
  font-size:15vh;
- box-shadow: 0 10px 25px #000;
+ box-shadow:0 10px 25px  #000;
  text-shadow: 0 -1px 0 #82DFF1,
-
-
                0 6px 1px rgba(0,0,0,.5),
                0 0 5px rgba(0,0,0,.5),
                0 1px 3px rgba(0,0,0,.8),
@@ -98,8 +106,15 @@ margin: 20% auto ;
   #wrapPol > header > p {
     font-size:15vh;
   }
+ .active #content{
+    margin-top:10vh;
+    line-height:1.1;
+    font-size:5vh;
+    margin-left:8%;
+  }
   #content{
     margin-top:10vh;
+    margin-left:-50%;
     line-height:1.1;
     font-size:5vh;
   }
@@ -108,10 +123,17 @@ margin: 20% auto ;
     #wrapPol > header > p {
         font-size:14vw;
     }
-    #content{
+   .active #content{
         margin-top:8vh;
          width: 73vw;
           font-size:5vw;
+          margin-left:8%;
+    }
+   #content{
+        margin-top:8vh;
+         width: 73vw;
+         font-size:5vw;
+         margin-left:-50%;
     }
 
     #wrapPol:after{
@@ -130,4 +152,11 @@ margin: 20% auto ;
             left:50vw;
             z-index: 100;
         }
+}
+
+
+
+#content,#cloud,#wrapPol:after,#wrapPol:before{
+    transition: all 1.5s ease;
+
 }

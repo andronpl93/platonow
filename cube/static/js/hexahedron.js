@@ -1,10 +1,13 @@
 var settings = {
      hKol          : 0,
      content       : [
+                    '<img src="../../static/img/hex/col.gif">',
+                    '<img src="../../static/img/hex/cat2.gif">',
                     '<img src="../../static/img/hex/racoon3.gif">',
                     '<img src="../../static/img/hex/racoon2.gif">',
                      '<img src="../../static/img/hex/racoon.gif">',
                      '<img src="../../static/img/hex/dc.gif">',
+                     '<img src="../../static/img/hex/ok.gif">',
                      '<img src="../../static/img/hex/vk.gif">',
                      '<img src="../../static/img/hex/fb.gif">',
                      '<img src="../../static/img/hex/gp.gif">',
@@ -39,12 +42,8 @@ function res(){
   var marginLeft = $('.hex:first-child').width()/(-2)-parseInt($('.hex:first-child').css('margin-right'))/2;
 
 
-  $('.back').each(function (index){
-        $(this).html(" ");
-        $(this).parent().css('background-color','black');
-  });
 
-  $('.hex:first-child').css('margin-left',marginLeft+'px').children('.back').removeClass('back');
+  $('.hex:first-child').css('margin-left',marginLeft+'px').children('.back').removeClass('back').html('');
   a=$('.hex:first-child').position().top;
 
    var index=0;
@@ -59,7 +58,7 @@ function res(){
             if(index)
             {
 
-                $(this).css({'clear':'left','margin-left':marginLeft+'px'}).children('.back').removeClass('back');
+                $(this).css({'clear':'left','margin-left':marginLeft+'px'}).children('.back').removeClass('back').html('');
                 a=$(this).position().top;
                 index=0;
 
@@ -67,7 +66,7 @@ function res(){
             else
             {
                 a=$(this).position().top;
-                $(this).children('.back').removeClass('back');
+                $(this).children('.back').removeClass('back').html('');
                 index=1;
             }
         }
@@ -94,23 +93,29 @@ function imagePlacement (){
     $('.back').each(function (index){
         if(i<settings.content.length){
                 a=mas.pop();
-                if(a.search('<img')!=-1)
-                {
                         $(this).html(a);
-                        $(this).parent().css('background-color','transparent');
-                }
-                else
-                {
-                    $(this).html("");
-                    $(this).parent().css('background-color',a);
-                    alert(a);
-                }
+
+                       // $(this).parent().css('background-color','transparent');
                  i++
 
         }
     });
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function randList(list){
     var r,v;
