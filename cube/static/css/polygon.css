@@ -49,7 +49,7 @@
     }
 
 
-#wrapPol > header > p {
+#wrapPol > header > p,#content {
     position: relative;
     z-index:5;
     margin:1%;
@@ -72,16 +72,46 @@
                0 15px 15px rgba(0,0,0,.5),
                0 30px 30px rgba(0,0,0,.2);
 }
+#content{
+ width: 55vw;
+margin: 20% auto ;
+ margin-left:8%;
+ padding:3%;
+ text-align: justify;
+ line-height:1.5;
+ background-color: rgba(0,0,0,.5);
+ font-size:15vh;
+ box-shadow: 0 10px 25px #000;
+ text-shadow: 0 -1px 0 #82DFF1,
 
+
+               0 6px 1px rgba(0,0,0,.5),
+               0 0 5px rgba(0,0,0,.5),
+               0 1px 3px rgba(0,0,0,.8),
+               0 3px 5px rgba(0,0,0,0.1),
+               0 2px 5px rgba(0,0,0,0.5),
+               0 10px 10px rgba(0,0,0,.5),
+               0 30px 30px rgba(0,0,0,.2);
+}
 
 @media screen and (orientation: landscape) {
   #wrapPol > header > p {
     font-size:15vh;
   }
+  #content{
+    margin-top:10vh;
+    line-height:1.1;
+    font-size:5vh;
+  }
 }
 @media screen and (orientation: portrait) {
     #wrapPol > header > p {
         font-size:14vw;
+    }
+    #content{
+        margin-top:8vh;
+         width: 73vw;
+          font-size:5vw;
     }
 
     #wrapPol:after{

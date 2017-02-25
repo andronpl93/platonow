@@ -1,14 +1,19 @@
 var settings = {
      hKol          : 0,
      content       : [
-                     '<img src="../../static/img/hex/adaptive.gif">',
-                     '<img src="../../static/img/hex/rs.gif">',
-                     '<img src="../../static/img/hex/pg.gif">',
+                    '<img src="../../static/img/hex/racoon3.gif">',
+                    '<img src="../../static/img/hex/racoon2.gif">',
+                     '<img src="../../static/img/hex/racoon.gif">',
+                     '<img src="../../static/img/hex/dc.gif">',
                      '<img src="../../static/img/hex/vk.gif">',
                      '<img src="../../static/img/hex/fb.gif">',
                      '<img src="../../static/img/hex/gp.gif">',
                      '<img src="../../static/img/hex/ig.png">',
-                     '<img src="../../static/img/hex/adaptive2.gif">'
+                     '<img src="../../static/img/hex/rs.gif">',
+                     '<img src="../../static/img/hex/ad3.gif">',
+                     '<img src="../../static/img/hex/adaptive2.gif">',
+                     '<img src="../../static/img/hex/adaptive.gif">',
+
                      ]
      }
 
@@ -66,13 +71,13 @@ function res(){
                 index=1;
             }
         }
-        if($(this).position().top+$(this).height()+ 2*parseInt($(this).css('margin-top'))< cHei)
-        {
+      //  if($(this).position().top+$(this).height()+ 2*parseInt($(this).css('margin-top'))< cHei)
+     //   {
             settings.hKol+=1;
           //  $(this).css('background-color','red');
-        }
-        else
-            $(this).children('.back').removeClass('back');
+       // }
+       // else
+        //    $(this).children('.back').removeClass('back');
 
    });
     imagePlacement ();
@@ -84,15 +89,23 @@ function res(){
 
 function imagePlacement (){
     var mas=settings.content.slice();
-
+    var a;
     var i=0;
     $('.back').each(function (index){
         if(i<settings.content.length){
-           // if(index%Math.ceil(settings.hKol/(settings.hKol-settings.content.length))!=0){
-                $(this).html(randList(mas));
-                $(this).parent().css('background-color','transparent');
-                i++;
-           // }
+                a=mas.pop();
+                if(a.search('<img')!=-1)
+                {
+                        $(this).html(a);
+                        $(this).parent().css('background-color','transparent');
+                }
+                else
+                {
+                    $(this).html("");
+                    $(this).parent().css('background-color',a);
+                    alert(a);
+                }
+                 i++
 
         }
     });
