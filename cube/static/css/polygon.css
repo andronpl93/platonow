@@ -26,10 +26,7 @@
 .active #wrapPol:after{
     right:10%;
 }
-.active #wrapPol:before{
-       right:30%;
 
-}
 #cloud{
        top:12%;
        right:-300%;
@@ -53,7 +50,7 @@
        width:20%;
        height:20%;
        bottom:1%;
-       right:0%;
+       right:30%;
        z-index: 2;
        background-image: url('../img/polygon/cat.png');
     }
