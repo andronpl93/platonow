@@ -13,7 +13,7 @@ var settings = {
                      '<img src="../../static/img/hex/gp.gif">',
                      '<img src="../../static/img/hex/ig.png">',
                      '<img src="../../static/img/hex/rs.gif">',
-                     '<img src="../../static/img/hex/ad3.gif">',
+                     '<img src="../../static/img/hex/adaptive3.gif">',
                      '<img src="../../static/img/hex/adaptive2.gif">',
                      '<img src="../../static/img/hex/adaptive.gif">',
 
