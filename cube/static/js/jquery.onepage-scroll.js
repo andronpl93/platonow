@@ -17,7 +17,7 @@
   var defaults = {
     sectionContainer: "section",
     easing: "ease-in-out",
-    animationTime: 800,
+    animationTime: 600,
     pagination: true,
     updateURL: false
 	};
